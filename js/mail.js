@@ -26,5 +26,13 @@ let arrMails = ["name@mail.com", "name1@mail.com", "name2@mail.com", "name3@mail
 const userMail = prompt(`Inserisci la tua mail:`)
 console.log(userMail)
 
-// Controllo che la mail rispetti il giusto formato
+// La mail si trova nella lista?
+for (let index = 0; index < arrMails.length; index++) {
+    if (arrMails[index] === userMail) {
+        console.log(`Mail valida`)
+    } else {
+        console.log(`Mail non valida`)
+    }
+    
+}
 
