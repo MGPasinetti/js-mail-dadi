@@ -13,26 +13,26 @@
 // Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in pagina.
 
 
-// INPUT: usermail
-
-// CHECKING:usermail in list?
-
-// OUTPUT: printing message on outcome of the check
-
 // Creo una lista di mail
-let arrMails = ["name@mail.com", "name1@mail.com", "name2@mail.com", "name3@mail.com", "name4@mail.com", "name5@mail.com", "name6@mail.com", "name7@mail.com", "name8@mail.com", "name9@mail.com"]
+let arrMails = ["name@mail.com", "name1@mail.com", "name2@mail.com", "name3@mail.com", "name4@mail.com", "name5@mail.com", "name6@mail.com", "name7@mail.com", "name8@mail.com", "name9@mail.com"];
 
 // Chiedo all'utente la sua mail
-const userMail = prompt(`Inserisci la tua mail:`)
-console.log(userMail)
+const userMail = prompt(`Inserisci la tua mail:`);
+
+let found = false;
 
 // La mail si trova nella lista?
 for (let index = 0; index < arrMails.length; index++) {
     if (arrMails[index] === userMail) {
-        console.log(`Mail valida`)
-    } else {
-        console.log(`Mail non valida`)
+        found = true;
     }
-    
 }
+
+if (found) {
+    console.log("Mail trovata");
+} else {
+    console.log("Mail non trovata");
+}
+
+
 
