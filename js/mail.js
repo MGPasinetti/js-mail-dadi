@@ -17,7 +17,7 @@
 let arrMails = ["name@mail.com", "name1@mail.com", "name2@mail.com", "name3@mail.com", "name4@mail.com", "name5@mail.com", "name6@mail.com", "name7@mail.com", "name8@mail.com", "name9@mail.com"];
 
 // Chiedo all'utente la sua mail
-const userMail = prompt(`Inserisci la tua mail:`);
+const userMail = document.querySelector(".btn-login");
 
 let found = false;
 
