@@ -20,52 +20,59 @@
 // Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in pagina.
 
 
+// MAIL
 let arrMails = [
-    "name@mail.com", 
-    "name1@mail.com", 
-    "name2@mail.com", 
-    "name3@mail.com", 
-    "name4@mail.com", 
-    "name5@mail.com", 
-    "name6@mail.com", 
-    "name7@mail.com", 
-    "name8@mail.com", 
+    "name@mail.com",
+    "name1@mail.com",
+    "name2@mail.com",
+    "name3@mail.com",
+    "name4@mail.com",
+    "name5@mail.com",
+    "name6@mail.com",
+    "name7@mail.com",
+    "name8@mail.com",
     "name9@mail.com"
 ];
 
-const logBtn = document.querySelector(".btn-login");
+const inputMail = document.querySelector(`#mail`)
+const btnPlay = document.querySelector(`#play`);
+const eleOutput = document.querySelector(`.output`)
 
-logBtn.addEventListener(`click`, function() {
 
-    let userMail = document.getElementById("accedi").value;
+btnPlay.addEventListener(`click`, function () {
+    const mailSearch = inputMail.value;
+    inputMail.value = ``;
 
     let found = false;
 
     for (let index = 0; index < arrMails.length; index++) {
-        if (arrMails[index].toLocaleLowerCase() === userMail.toLocaleLowerCase()) {
+        if (arrMails[index].toLocaleLowerCase() === mailSearch.toLocaleLowerCase()) {
             found = true;
         }
     }
 
+    let msg = `Non puoi giocare`;
     if (found) {
-        console.log("Mail trovata");
-    } else {
-        console.log("Mail NON trovata");
-    }
-});
+        let numComputer = Math.floor(Math.random() * (6)) + 1;
+        let numUser = Math.floor(Math.random() * (6)) + 1;
+        console.log(numComputer, numUser);
+
+        if (numComputer > numUser) {
+            msg = `Hai vinto il computer!`;
+        } else if (numComputer < numUser) {
+            msg = `Hai perso`;
+        } else {
+            msg = `Pareggio`;
+        }
+    };
+
+    eleOutput.innerHTML = msg
+})
 
 
-let numComputer = Math.floor(Math.random() * (6) ) + 1;
-let numUser = Math.floor(Math.random() * (6) ) + 1;
-console.log(numComputer, numUser);
 
-if (numComputer > numUser) {
-    console.log(`Hai vinto il computer!`)
-} else if (numComputer < numUser){
-    console.log(`Hai perso`)
-} else {
-    console.log(`Pareggio`)
-}
+
+
 
 
 
