@@ -11,5 +11,4 @@
 // 3. si ma noi cosa vogliamo fare?
 // 4. torniamo a scrivere in italiano
 // 5. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
-// Bonus:
-// Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in pagina.
+
